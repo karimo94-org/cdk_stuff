@@ -45,7 +45,7 @@ jobs:
           npm install -g aws-cdk
 
       - name: Deploy to AWS (CDK Deploy)
-        run: cd ./bin && cdk deploy --require-approval never CdkStuffStack
+        run: cd ./bin && cdk deploy CdkStuffStack --require-approval never
       
       - name: CDK Synth
         run: cd ./bin && npx cdk synth
